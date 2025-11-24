@@ -77,3 +77,34 @@ SMB (Metasploitable 2)
  Medusa para SMB: (Ataque de senhas para usuários diferentes, evitando bloqueio de tentativas para 1     usuários)
    medusa -h 192.168.56.101 -U smb_users.txt -P senhas_spray.txt -M smbnt -t 2 -T 50
 
+
+8. Medidas de Mitigação
+  Contra força bruta (FTP, SSH, SMB)
+  Bloqueio de IP após tentativas falhas (fail2ban)
+  Desabilitar serviços desnecessários
+  Habilitar firewall (ufw, iptables)
+  Trocar portas padrão não resolve, mas ajuda levemente
+  Utilizar senhas fortes e autenticação multifator
+  Para aplicações web (DVWA)
+
+9.Implementar CAPTCHA
+  Rate limiting
+  Proteção CSRF
+  Hashing forte de senhas (bcrypt/argon2)
+  Políticas de timeout
+
+10.Configurações de rede
+  Não expor portas críticas na internet
+  VLANs para serviços internos
+  
+11. Conclusões
+  Neste projeto, explorei:
+  Configuração de ambiente vulnerável
+  Funcionamento do Medusa
+  Ataques de força bruta em múltiplos serviços
+  Enumeração e coleta de informações
+  Exploração de web forms vulneráveis
+  Password spraying
+
+13. Defesas recomendadas
+  Ficou claro que serviços desprotegidos e credenciais fracas são facilmente exploráveis, reforçando a importância de políticas de segurança e monitoramento.
